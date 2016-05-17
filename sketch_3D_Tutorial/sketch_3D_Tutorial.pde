@@ -12,7 +12,7 @@ void draw() {
   background(0);
   translate(100, 100, 0);
   if (mousePressed) {
-    lights();
+    ambientLight(0,0,255);
   }
   noStroke();
   fill(255);
