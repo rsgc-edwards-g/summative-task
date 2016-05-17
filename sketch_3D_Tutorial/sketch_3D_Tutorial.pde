@@ -12,7 +12,8 @@ void draw() {
   background(0);
   translate(100, 100, 0);
   if (mousePressed) {
-    ambientLight(0,0,255);
+    lights();
+    directionalLight(255, 0, 255, -1, -1, 1);
   }
   noStroke();
   fill(255);
