@@ -3,33 +3,18 @@
 float x, y, z;
 
 void setup() {
-  size(640, 360, P3D);
-  background(0);
+  size(200, 200, P3D);
+  
 }
 
 void draw() {
 
-  translate(width/2, height/2, 0);
-  stroke(255);
-  rotateX(PI/2);
-  rotateZ(-PI/6);
-  noFill();
-
-  beginShape();
-  vertex(-100, -100, -100);
-  vertex( 100, -100, -100);
-  vertex(   0, 0, 100);
-
-  vertex( 100, -100, -100);
-  vertex( 100, 100, -100);
-  vertex(   0, 0, 100);
-
-  vertex( 100, 100, -100);
-  vertex(-100, 100, -100);
-  vertex(   0, 0, 100);
-
-  vertex(-100, 100, -100);
-  vertex(-100, -100, -100);
-  vertex(   0, 0, 100);
-  endShape();
+  background(0);
+  translate(100, 100, 0);
+  if (mousePressed) {
+    lights();
+  }
+  noStroke();
+  fill(255);
+  sphere(50);
 }
