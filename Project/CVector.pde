@@ -1,4 +1,4 @@
-static class CVector {
+class CVector {
   
   // Data
   float x;
