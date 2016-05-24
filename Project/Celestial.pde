@@ -4,7 +4,7 @@ class Celestial {
   CVector location; 
   CVector velocity; 
   CVector acceleration;
-  float gravConst = 6.67 * pow(10, -11);
+  float gravConst = (float) (6.67 * pow(10.0, -11.0));
 
   CVector netForce;
 
