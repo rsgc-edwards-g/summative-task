@@ -1,7 +1,7 @@
 
 ArrayList planets;
 
-int orbitRadius = 25;
+int orbitRadius = 100;
 
 float starX;
 float starY;

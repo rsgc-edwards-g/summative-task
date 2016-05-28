@@ -35,10 +35,10 @@ class Planet extends Celestial {
   Boolean starCollision(Celestial s){
     
       for (int j = 0; j < 360; j += 30){
-        float starX = s.location.x + cos(radians(j))*s.radius;
-        float starY = s.location.y + cos(radians(j))*s.radius;
-        CVector starPos = new CVector(starX, starY);
-        CVector separation = CVector.sub(starPos, location);
+        float x = location.x + cos(radians(j))*radius;
+        float y = location.y + cos(radians(j))*radius;
+        CVector position = new CVector(x, y);
+        CVector separation = CVector.sub(position, s.location);
         if (separation.mag() < s.radius){
           return true;
         } 
