@@ -1,25 +1,28 @@
 
 float starX, starY;
+Star sun;
+Core core;
 
 void setup() {
   size(640, 640, P3D);
-  frameRate(100);
+  frameRate(50);
   sphereDetail(25);
 
-  starX = 100;
-  starY = 100;
+  starX = width/2;
+  starY = height/2;
+  
+  sun = new Star(400, 100, starX, starY);
+  core = new Core(sun, 50);
 }
 
 void draw() {
   background(0);
-  camera(mouseX, mouseY, (height/2) / tan(PI/6), mouseX, height/2, 0, 0, 1, 0);
-  translate(width/2, height/2, -100);
+  //camera(mouseX, mouseY, (height/2) / tan(PI/6), mouseX, height/2, 0, 0, 1, 0);
 
-  Star sun = new Star(400, 100, starX, starY);
-  Core core = new Core(sun, 50);
+  
   sun.death();
-  core.collapse();
+  core.collapse(sun.radius);
   sun.display();
   core.display();
 
-}
+} 

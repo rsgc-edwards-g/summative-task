@@ -16,19 +16,24 @@ class Core {
     // Draw the sphere by translating the coordinate system
     pushMatrix();
     translate(location.x, location.y, 0);
+    noStroke();
     fill(colour, colour, colour);
     sphere(radius);
     popMatrix();
   }
   
-  void collapse() {
+  void collapse(float starRadius) {
     if (mass > 0) {
       mass -= 4;
-      radius -= 2;
+      radius -= 0.1;
       if (colour > 100){
         colour -= 2;
       }
+    }  
+    if (starRadius < radius) {
+     colour = 255; 
     }
+    
   }
   
 }

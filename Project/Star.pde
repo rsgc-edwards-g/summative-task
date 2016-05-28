@@ -29,16 +29,14 @@ class Star {
     if (mass > 0) {
       mass -= 4;
       if (green > 0) {
-        green -= 4;
+        green -= 2;
       }
       radius++; 
     } else if (green < 255) {
-      green += 4;
-      blue += 4;
-      radius -= 6;
-    } else if (mass == 0 && green == 255) {
-      fill(red, green, blue);
-    }
+      green += 2;
+      blue += 2;
+      radius -= 2;
+    } 
   }
   
 }
