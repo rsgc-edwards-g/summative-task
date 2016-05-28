@@ -6,5 +6,12 @@ class Star extends Celestial{
     super(mass, radius, xLocation, yLocation);
   }
   
+  void display(){
+   
+    // Set the colour
+    fill(255, 255, 38);
+    // Use celestial's display function to draw the star
+    super.display();
+  }
   
 }

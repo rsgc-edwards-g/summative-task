@@ -13,9 +13,7 @@ class Celestial {
   
   
   void display(){
-    
-    fill(0, 0, 90);
-    
+    // Draw the circle
     ellipse(location.x, location.y, radius * 2, radius * 2);
   }
   
