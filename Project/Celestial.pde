@@ -1,16 +1,9 @@
 class Celestial {
 
-  float mass, radius;
-  CVector location; 
- 
-  
 
 
   Celestial(float _mass, float _radius, float location_x, float location_y) {
-    location = new CVector(location_x, location_y);
     
-    mass = _mass;
-    radius = _radius;
   }
 
   void display() {
