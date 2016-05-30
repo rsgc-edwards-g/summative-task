@@ -49,6 +49,7 @@ class Planet extends Celestial {
       CVector separation = CVector.sub(position, s.location);
       // If that distance is less than or equal to the sun's radius, return true
       if (separation.mag() <= s.radius) {
+        s.mass += mass;
         return true;
       }
     }

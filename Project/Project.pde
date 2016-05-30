@@ -7,7 +7,7 @@ void setup() {
   // Set the dimensions and make sure the animation occurs in 3D
   size(640, 640, P3D);
   // Set the animating speed and quality using these functions
-  frameRate(50);
+  frameRate(25);
   // Set the sphere detail moderately low so that you can still see the core
   sphereDetail(40);
 

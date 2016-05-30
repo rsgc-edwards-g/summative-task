@@ -1,14 +1,14 @@
 class Core {
   
   // Create the variables that are going to be changing as the core shrinks as well as the location vector
-  float mass, radius;
+  float count, radius;
   CVector location;
   int colour = 225;
   
   // The core only needs a star and can determine its own properties from that
   Core(Star s){
-    // Mass is only a counter in this scenario. A real star's core won't lose all of its mass
-    mass = s.mass / 2;
+    // count is only a counter in this scenario. A real star's core won't lose all of its count
+    count = s.count / 2;
     radius = s.radius / 2;
     // The core is at the exact center of the star
     location = s.location;
@@ -33,9 +33,9 @@ class Core {
   }
   
   void collapse(float starRadius) {
-    // If the core still has mass on its "counter" decrement the mass and the radius
-    if (mass > 0) {
-      mass -= 2;
+    // If the core still has time on its "counter" decrement the count and the radius
+    if (count > 0) {
+      count -= 2;
       radius -= 0.1;
       // If the colour of the core isn't dark gray yet, keep decrementing the colour code
       if (colour > 100){

@@ -1,7 +1,7 @@
 class Star {
   
   // Create the variables that will change as the star dies and the location vector
-  float mass, radius;
+  float count, radius;
   CVector location;
   // Add as much red and green to the star as possible to make the star yellow
   int red = 255;
@@ -9,10 +9,10 @@ class Star {
   // There should be no blue until the star starts to turn white
   int blue = 0;
   
-  // The star requires a mass, radius and location coordinates
-  Star(float _mass, float _radius, float locationX, float locationY){
+  // The star requires a count, radius and location coordinates
+  Star(float mass, float _radius, float locationX, float locationY){
     // Set the global variables for use later
-    mass = _mass;
+    count = mass;
     radius = _radius;
     location = new CVector(locationX, locationY);
      
@@ -32,10 +32,10 @@ class Star {
   }
   
   void death(){
-    // While there is still mass on the star's "counter," turn it into a red giant
-    if (mass > 0) {
-      // Take mass off the mass counter
-      mass -= 4;
+    // While there is still time on the star's "counter," turn it into a red giant
+    if (count > 0) {
+      // Take time off the count counter
+      count -= 4;
       // If there's green in the star, decrease it to make the star redder
       if (green > 0) {
         green -= 2;
